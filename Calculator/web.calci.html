@@ -1,0 +1,123 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset = "UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" type="text/css" href="assets/calculator.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<title>Web Calculator</title>
+</head> 
+<body>  
+<div class="row">
+<div class="col-lg-5 col-xs-10">
+ <section class="calci">
+<form action="">
+<div class="screen"> <!-- Answer screen -->
+<input type="text" id="answer" value="0">
+</div>
+<div id ="science"> <!-- Scientific Calculator -->
+    <input type="button" value="sin"    class="sc_operator" />
+    <input type="button" value="cos"    class="operator sc_operator" />
+    <input type="button" value="tan"    class="operator sc_operator" />
+    <input type="button" value="asin"   class="operator sc_operator" />
+    <input type="button" value="acos"   class="operator sc_operator" />
+    <input type="button" value="atan"   class="operator sc_operator" /><br>
+    <input type="button" value="ln"     class="operator sc_operator" />
+    <input type="button" value="log"    class="operator sc_operator" />
+    <input type="button" value="e(x)"   class="operator sc_operator" />
+    <input type="button" value="10^x"   class="operator sc_operator" />
+    <input type="button" value="2^x"    class="operator sc_operator" />
+    <input type="button" value="x²"     class="operator sc_operator" /><br>
+    <input type="button" value="x³"     class="operator sc_operator" />
+    <input type="button" value="√x"     class="operator sc_operator" />
+    <input type="button" value="∛x"     class="operator sc_operator" />
+    <input type="button" value="1/x"    class="operator sc_operator" />
+    <input type="button" value="x!"     class="operator sc_operator" />   
+    <input type="button" value="nCr"    class="operator sc_operator" /><br>
+    <input type="button" value="nPr"    class="operator sc_operator" />
+    <input type="button" value="floor"  class="operator sc_operator" />
+    <input type="button" value="ceil"   class="operator sc_operator" />
+    <input type="button" value="e"      class="operator sc_operator" />
+    <input type="button" value="ln10"   class="operator sc_operator" />
+    <input type="button" value="√1/2"   class="operator sc_operator" /><br>
+    <input type="button" value="√2"     class="operator sc_operator" />
+    <input type="button" value="ln2"    class="operator sc_operator" />
+    <input type="button" value="Pi"     class="operator sc_operator" />
+    <input type="button" value="to_oct" class="operator sc_operator" />
+    <input type="button" value="to_hd"  class="operator sc_operator" />
+    <input type="button" value="to_bin"  class="operator sc_operator" /><br>
+</div>
+<!-- Displaying standard calculator -->
+<div>
+    <input type="button" value="7"  class="standard number" />
+    <input type="button" value="8"  class="standard number" />
+    <input type="button" value="9"  class="standard number" />
+    <input type="button" value="/"  class="standard standard_op" />
+    <input type="button" value="C"  class="cl" /><br>
+    <input type="button" value="4"  class="standard number" />
+    <input type="button" value="5"  class="standard number"/>
+    <input type="button" value="6"  class="standard number" />
+    <input type="button" value="*"  class="standard standard_op"/>
+    <input type="button" value="%"  class="standard standard_op" /><br>
+    <input type="button" value="1"  class="standard number"/>
+    <input type="button" value="2"  class="standard number"/>
+    <input type="button" value="3"  class="standard number"/>
+    <input type="button" value="-"  class="standard standard_op"/>
+    <input type="button" value="**" class="standard standard_op" /><br>
+    <input type="button" value="0"  class="standard number"/>
+    <input type="button" value="."  class="standard number"/>
+    <input type="button" value="+"  class="standard standard_op"/>
+    <input type="button" value="="  class="equals"/>
+    <input type="button" value="&larr;"  class=" clear"/>
+</div>
+</form>
+</section>   
+</div> 
+<div class="col-lg-6 col-xs-8">
+ <article class= "instruc">
+     <button id = "b1" onclick = "instruct()">Instruction Pad</button>
+     <button id= "b2"  onclick = "memory()">Memory Pad</button>
+  <div id = "instruct">
+  <div class="pad">
+      <p class="text">
+          <b>1. For Standard Calculator: <br></b>
+          a. Use of mulitple expressions at one time <br>
+          b. You can't enter a negative number<br>
+          c. Results can have negative numbers<br>
+          b. Click on "=" to evaluate the result <br>
+          c. "C" Clears the result <br>
+          d. "&larr;" clears the last entered character <br>
+          e. "**" denotes the power sign <br>
+          <b>2. For Scientific Calculator: <br></b>
+          a. Type the number then click on the operator<br>
+          b. eg: click 99 then sin -- ans will be sin(99)<br>
+          c. If there is some result on the screen then also if you click any operator you get operator(result)<br>
+          d. For using nCr and nPr first typed number is n then press nCr operator the screen displays nothing then type r and press equal to get the result -- nCr. 
+          e. e, ln10, √2, √1/2, ln2, Pi are all constants. Clicking these erases everything and dispays their values.<br>
+          f. Operations can be performed on the constants.<br>
+          g. to oct -- changes decimal number to octal<br>
+          h. to hd -- changes decimal number to hexadecimal<br>
+          i. to bin -- changes decimal number to binary<br>
+          
+          
+    </div>   
+  </div>
+  <div id = "memory">
+      <div class="pad pad2">
+      <p id = "display">     
+      </p>
+      </div>
+ </div>
+</article>   
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+ 
+</script>
+<script type ="text/javascript" src="assets/calculator.js"></script>
+
+</body>
+</html>
